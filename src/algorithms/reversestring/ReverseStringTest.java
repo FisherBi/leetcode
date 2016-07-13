@@ -11,6 +11,7 @@ public class ReverseStringTest {
 
     @org.junit.Test
     public void testReverseString() throws Exception {
-        Assert.assertEquals("olleH",ReverseString.reverseString("Hello"));
+        Assert.assertEquals("olleH", ReverseString.reverseString("Hello"));
+        Assert.assertEquals("Hello World!",ReverseString.reverseString(ReverseString.reverseString("Hello World!")));
     }
 }

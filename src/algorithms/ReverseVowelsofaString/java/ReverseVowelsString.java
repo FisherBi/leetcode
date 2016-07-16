@@ -1,4 +1,4 @@
-package algorithms.ReverseVowelsofaString.src;
+package algorithms.ReverseVowelsofaString.java;
 
 import java.util.*;
 

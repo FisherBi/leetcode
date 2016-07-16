@@ -1,4 +1,4 @@
-package algorithms.reversestring.src;
+package algorithms.reversestring.java;
 
 import java.util.Scanner;
 

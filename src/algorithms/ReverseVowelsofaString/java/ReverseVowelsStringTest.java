@@ -1,9 +1,7 @@
-package algorithms.ReverseVowelsofaString.src;
+package algorithms.ReverseVowelsofaString.java;
 
 import junit.framework.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by fisbii on 16-7-15.

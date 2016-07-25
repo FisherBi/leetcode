@@ -1,1 +1,5 @@
-delete from Person p where p.Id in (select p3.Id from Person p3, (select min(p1.Id) as minId,p1.Email as Email from Person p1,Person p2 where p1.Id != p2.Id and p1.Email = p2.Email group by p1.Email) as pp where p3.Id != pp.minId and p3.Email = pp.Email);
+DELETE p1 FROM Person p1 INNER JOIN Person p2
+WHERE p1.Email = p2.Email AND p1.Id > p2.Id;
+
+DELETE FROM Person WHERE ID NOT IN 
+(SELECT * FROM (SELECT MIN(Id) FROM Person p GROUP BY Email) t);

@@ -11,12 +11,12 @@ public class RotateArray {
         reverse(nums,k,nums.length-1);
     }
 
-    public static void reverse(int[] nums,int strat,int end){
-        while(end > strat){
-            int t = nums[strat];
-            nums[strat] = nums[end];
+    public static void reverse(int[] nums,int start,int end){
+        while(end > start){
+            int t = nums[start];
+            nums[start] = nums[end];
             nums[end] = t;
-            strat++;
+            start++;
             end--;
         }
     }

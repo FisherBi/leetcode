@@ -5,16 +5,22 @@ package algorithms.BestTimetoBuyandSellStock;
  */
 public class Solution {
     public static int maxProfit(int[] prices) {
-        int max = 0;
-        int buy = prices[0];
-        for(int i = 1; i < prices.length; i++){
-            if(max < prices[i] - buy){
-                max = prices[i] - buy;
-            }else if(prices[i] - buy < 0){
-                buy = prices[i];
+        int min = 0;
+        int maxDiff = 0;
+        int buy = 0;
+        int sell = 0;
+        for(int i = 0; i < prices.length; i++){
+            if(prices[i] < prices[min]){
+                min = i;
+            }
+            int diff = prices[i] - prices[min];
+            if(diff > maxDiff){
+                buy = min;
+                sell = i;
+                maxDiff = diff;
             }
         }
-        return max;
+        return maxDiff;
     }
     public static void main(String args[]){
         int[] prices = {7,1,5,3,6,4};

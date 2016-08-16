@@ -29,7 +29,7 @@ public class Solution {
     }
 
     public static void main(String args[]){
-        List<Integer> list = getRow(4);
+        List<Integer> list = getRow(3);
         for(Integer i : list){
             System.out.println(i);
         }

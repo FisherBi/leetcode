@@ -11,32 +11,27 @@ import java.util.List;
 public class Solution {
     public static List<Integer> getRow(int rowIndex) {
         List<Integer> resList = new ArrayList<>();
-        if(rowIndex == 0){
-            resList.add(1);
-            return resList;
-        }
         Integer res[] = new Integer[rowIndex+1];
-        for(int i = 0; i <= (rowIndex+1)/2; i++){
-            res[i] = res[rowIndex-i] = combination(rowIndex,i);
+        res[0] = 1;
+        for(int i = 1; i <= rowIndex; i++){
+            for(int j = i; j >= 0; j--){
+                if(i == j){
+                    res[j] = res[j-1];
+                }else if(j == 0){
+                    res[j] = res[j];
+                }else{
+                    res[j] = res[j-1] + res[j];
+                }
+            }
         }
         resList = Arrays.asList(res);
         return resList;
     }
 
-    public static int combination(int n,int m){
-        BigInteger ans = BigInteger.ONE;
-        for(int i = n; i >= (n-m+1); --i){
-            ans = ans.multiply(BigInteger.valueOf(i));
-        }
-        BigInteger div = BigInteger.ONE;
-        for(int i = 1; i <= m; i++){
-            div = div.multiply(BigInteger.valueOf(i));
-        }
-        BigInteger res = ans.divide(div);
-        return res.intValue();
-    }
-
     public static void main(String args[]){
-        System.out.println(combination(17, 10));
+        List<Integer> list = getRow(4);
+        for(Integer i : list){
+            System.out.println(i);
+        }
     }
 }

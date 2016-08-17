@@ -1,6 +1,5 @@
-package PascalTriangle2;
+package algorithms.PascalTriangle2;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

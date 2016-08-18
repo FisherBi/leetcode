@@ -3,6 +3,7 @@ package algorithms.PascalTriangle;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
 
 /**
  * Created by fisbii on 16-8-17.
@@ -42,5 +43,7 @@ public class Solution {
 
     public static void main(String args[]){
         System.out.println(generate(17));
+        List<List<Integer>> lists = generate(16);
+        lists.forEach(System.out::println);
     }
 }

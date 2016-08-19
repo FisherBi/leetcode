@@ -1,9 +1,13 @@
 package algorithms.PascalTriangle;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by fisbii on 16-8-17.
@@ -43,7 +47,9 @@ public class Solution {
 
     public static void main(String args[]){
         System.out.println(generate(17));
-        List<List<Integer>> lists = generate(16);
-        lists.forEach(System.out::println);
+//        List<List<Integer>> lists = generate(16);
+//        lists.forEach(System.out::println);
+//        Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE));
+//        integers.limit(10).forEach(System.out::println);
     }
 }

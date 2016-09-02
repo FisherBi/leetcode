@@ -31,9 +31,7 @@ public class Solution {
             int[] newDigits = new int[digits.length+1];
             newDigits[0] = 1;
             newDigits[1] = 0;
-            for(int i = 1; i < digits.length; i++){
-                newDigits[i+1] = digits[i];
-            }
+            System.arraycopy(digits, 1, newDigits, 2, digits.length - 1);
             return newDigits;
         }else{
             return digits;
@@ -43,8 +41,8 @@ public class Solution {
     public static void main(String args[]){
         int digits[] = {8,9,9,9};
         int d[] = plusOne(digits);
-        for(int i = 0; i < d.length; i++){
-            System.out.print(d[i]);
+        for (int aD : d) {
+            System.out.print(aD);
         }
     }
 }

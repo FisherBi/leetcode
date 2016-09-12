@@ -8,17 +8,15 @@ public class Solution {
         String seq = "1";
         for (int i = 0; i < n; i++) {
             StringBuilder res = new StringBuilder();
-            boolean flag = false;
+//            boolean flag = false;
             int count = 1;
-            char tmp;
-            for(int j = 0; j < seq.length(); j++){
-                tmp = seq.charAt(j);
-                if(!flag){
+            char tmp = seq.charAt(0);
+            for(int j = 1; j < seq.length(); j++){
+                if(tmp == seq.charAt(j)){
+                    count++;
+                }else{
                     res.append(count).append(tmp);
                     count = 1;
-                }else{
-                    flag = true;
-                    count++;
                 }
             }
             seq = res.toString();

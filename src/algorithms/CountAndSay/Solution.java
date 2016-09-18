@@ -1,4 +1,4 @@
-package CountAndSay;
+package algorithms.CountAndSay;
 
 /**
  * Created by fisbii on 16-9-9.
